@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Valentine</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #ff4d6d, #ff758f);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+    
+    .card {
+      background: white;
+      width: 300px;
+      height: 200px;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+      animation: pop 1.5s ease-in-out infinite alternate;
+
+      
+    }
+
+    @keyframes pop {
+      from { transform: scale(1); }
+      to { transform: scale(1.05); }
+    }
+
+    /*.heart {
+      width: 60px;
+      height: 60px;
+      background: red;
+      position: relative;
+      transform: rotate(-45deg);
+      animation: beat 1s infinite;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      width: 60px;
+      height: 60px;
+      background: red;
+      border-radius: 50%;
+      position: absolute;
+    }
+   
+    .heart::before {
+      top: -30px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: 30px;
+      top: 0;
+    }
+
+    @keyframes beat {
+      0%, 100% { transform: rotate(-45deg) scale(1); }
+      50% { transform: rotate(-45deg) scale(1.2); }
+    }*/
+
+    .floating-heart {
+      position: absolute;
+      color: rgb(82, 6, 6);
+      font-size: 25px;
+      animation: float 6s ease-out infinite;
+    }
+
+    @keyframes float {
+      from {
+        bottom: -20px;
+        opacity: 1;
+      }
+      to {
+        bottom: 110%;
+        opacity: 0;
+      }
+    }
+    .text {
+  position:absolute;
+  top: 50px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #ff4d6d;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+  </style>
+</head>
+<body>
+ 
+
+  <div class="card">
+    <div class="text-align">Happy velentine Day-Kaushal</div>
+    <div class="heart"></div>
+  </div>
+
+  <!-- Floating hearts -->
+  <div class="floating-heart" style="left:10%; animation-delay:0s;">🤍</div>
+  <div class="floating-heart" style="left:30%; animation-delay:2s;">🤍</div>
+  <div class="floating-heart" style="left:50%; animation-delay:4s;">🤍</div>
+  <div class="floating-heart" style="left:70%; animation-delay:1s;">🤍</div>
+  <div class="floating-heart" style="left:90%; animation-delay:3s;">🤍</div>
+
+</body>
+</html>
